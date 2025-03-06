@@ -11,3 +11,9 @@ const toggleTheme = () => {
 };
 
 document.querySelector("#theme-toggle").addEventListener("click", toggleTheme);
+
+// PARALLAX FUNCTIONS
+
+// DROPDOWN MENUS
+
+// ASYNCHRONOUS FUNCTIONS

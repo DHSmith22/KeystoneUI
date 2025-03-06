@@ -24,24 +24,49 @@
         <!-- <link rel="stylesheet" href="../css/keystone.css"> -->
         <link rel="stylesheet" href="css/keystone.css">
 </head>
-<body class="vw-100 vh-100 flex flex-col justify-center items-center bg-gray-900 font-primary gap-2 sm:bg-color-red">
-    <header class="h-10 vw-75 bg-gray-800 flex flex-row items-center rounded-md">
-        <a href="" class="text-secondary pl-md text-2xl text-none w-70">KeystoneUI</a>
-        <nav class="flex flex-row list-none justify-evenly w-30">
-            <a href="" class="text-secondary text-none">About</a>
-            <a href="" class="text-secondary text-none">Store</a>
-            <a href="" class="text-secondary text-none">Login</a>
-        </nav>
-    </header>
-    <main class="h-80 vw-75 bg-gray-800 grid grid-cols-12 rounded-md gap-2 p-md">
-        <section class="col-span-5 bg-gray-700 rounded-md shadow-xl flex flex-col">
-            <h1 class="font-mono text-muted w-100 p-sm">Website Model:</h1>
-            <article class="w-100 grow text-secondary text-sm text-auto-hyphens p-sm">This website was created to highlight KeystoneUI in a practical environment.</article>
-        </section>
-        <section class="col-span-7 bg-gray-700 rounded-md shadow-xl">
-            <h1>UNDER CONSTRUCTION</h1>
-        </section>
-    </main>
+<body class="w-100 h-100 bg-gray-900 flex flex-col font-primary overflow-hidden-x">
+    <!-- LANDING PAGE -->
+    <section class="w-100 h-100 flex flex-col items-center relative">
+        <!-- HEADER/NAV -->
+        <header class="w-90 h-10 bg-gray-800 rounded-md mt-md md:mt-sm">
+            <nav class="w-100 h-100 flex flex-row justify-around items-center">
+                <div class="md:w-70">
+                    <a href="" class="text-secondary text-2xl text-none md:text-4xl">KeystoneUI</a>
+                </div>
+                <a href="" class="text-secondary text-md text-none md:text-lg">Faq</a>
+                <a href="" class="text-secondary text-md text-none md:text-lg">About</a>
+                <a href="https://dhsmith22.github.io" class="text-secondary text-md text-none md:text-lg">Back</a>
+            </nav>
+        </header>
+        <!-- P-1 MAIN CONTENT -->
+        <main class="w-90 h-90 bg-gray-800 mt-sm rounded-md grid grid-cols-12 grid-flow-row">
+            <article class="w-100 h-100 bg-gray-700 col-span-12 flex flex-col items-center rounded-md overflow-hidden-y">
+                <figure class="w-100 h-60 pt-sm flex justify-center">
+                    <img class="img-contain w-70 h-100 img-shadow img-rounded md:w-50 lg:w-30" alt="An image of Emperor Marcus Aurelius" src="https://images.unsplash.com/photo-1739323147107-bc748671f498?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </figure>
+                <div class="divider-light w-50"></div>
+                <h1 class="text-muted pt-sm">
+                    Marcus Aurelius
+                </h1>
+                <p class="text-secondary text-center m-md text-auto-hyphens text-wrap">
+                    “The happiness of your life depends upon the quality of your thoughts.”
+                </p>
+                <div class="divider-light w-50"></div>
+            </article>
+        </main>
+    </section>
+    <!-- FIXED FOOTER -->
+    <footer class="w-90 h-10 bg-gray-800 fixed align-self-center position-bottom-0 rounded-sm flex flex-col items-center">
+        <header class="w-90 h-100 rounded-md flex flex-row md:justify-end">
+            <nav class="w-100 h-100 flex flex-row justify-around items-center md:w-40 md:justify-between">
+                <a href="" class="text-secondary text-sm text-none">Careers</a>
+                <a href="" class="text-secondary text-sm text-none">Socials</a>
+                <a href="" class="text-secondary text-sm text-none">Charities</a>
+                <a href="" class="text-secondary text-sm text-none">Donations</a>
+            </nav>
+        </header>
+    </footer>
+
     <!-- DEFAULT SCRIPTS | CHOOSE BASED ON FILE STRUCTURE-->
         <!-- <script src="keystoneScript.js"></script> -->
         <!-- <script src="../js/keystoneScript"></script> -->

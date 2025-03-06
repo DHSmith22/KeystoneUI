@@ -2,12 +2,34 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    
 }
+/* ~~~~~ Scrollbar CSS ~~~~~ */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scroll-col-1) var(--scroll-col-2);
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 16px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: var(--scroll-col-2);
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-col-1);
+    border-radius: 10px;
+  }
 
 html {
     scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
 }
-
 :root {
     /*-------Default Core Variables-------*/
         /* typography */
@@ -182,7 +204,10 @@ html {
                     --border-color-light : var(--color-gray-300);
                     --border-color-base  : var(--color-gray-500);
                     --border-color-dark  : var(--color-gray-700);
-                    --border-color-focus : var(--color-yellow-light); 
+                    --border-color-focus : var(--color-yellow-light);
+                /* Scrollbar Colors */
+                    --scroll-col-1 : var(--color-gray-700);
+                    --scroll-col-2 : var(--color-gray-900);
         /* Gradients */
             /* Monochrome Gradients */
                 --gradient-gray-light : linear-gradient(180deg, var(--color-gray-100), var(--color-gray-300));
@@ -258,6 +283,75 @@ html {
 }
 
 /* CLASS NAMES */
+
+/* General Utilities */
+.overflow-hidden   {overflow: hidden;}
+.overflow-hidden-x {overflow-x: hidden; }
+.overflow-hidden-y {overflow-y: hidden; }
+.scroll-proximity  {scroll-snap-type: proximity; }
+
+/* Section Divider */
+.divider-dark {background: var(--color-gray-900); height: 1px; width: 75%; margin: 2%;}
+.divider-light {background: var(--color-gray-100); height: 1px; width: 75%; margin: 2%;}
+
+/* Element Positioning */
+.relative   {position: relative; }
+.fixed      {position: fixed; }
+.absolute   {position: absolute; }
+
+/* Right Positioning */
+.position-left-0    {left: 0%}
+.position-left-10   {left: 10%; }
+.position-left-20   {left: 20%; }
+.position-left-30   {left: 30%; }
+.position-left-40   {left: 40%; }
+.position-left-50   {left: 50%; }
+.position-left-60   {left: 60%; }
+.position-left-70   {left: 70%; }
+.position-left-80   {left: 80%; }
+.position-left-90   {left: 90%; }
+.position-left-100  {left: 100% }
+
+/* Right Positioning */
+.position-right-0    {right: 0%}
+.position-right-10   {right: 10%; }
+.position-right-20   {right: 20%; }
+.position-right-30   {right: 30%; }
+.position-right-40   {right: 40%; }
+.position-right-50   {right: 50%; }
+.position-right-60   {right: 60%; }
+.position-right-70   {right: 70%; }
+.position-right-80   {right: 80%; }
+.position-right-90   {right: 90%; }
+.position-right-100  {right: 100% }
+
+/* Top Positioning */
+.position-top-0    {top: 0%}
+.position-top-10   {top: 10%; }
+.position-top-20   {top: 20%; }
+.position-top-30   {top: 30%; }
+.position-top-40   {top: 40%; }
+.position-top-50   {top: 50%; }
+.position-top-60   {top: 60%; }
+.position-top-70   {top: 70%; }
+.position-top-80   {top: 80%; }
+.position-top-90   {top: 90%; }
+.position-top-100  {top: 100% }
+
+/* Bottom Positioning */
+.position-bottom-0    {bottom: 0%}
+.position-bottom-10   {bottom: 10%; }
+.position-bottom-20   {bottom: 20%; }
+.position-bottom-30   {bottom: 30%; }
+.position-bottom-40   {bottom: 40%; }
+.position-bottom-50   {bottom: 50%; }
+.position-bottom-60   {bottom: 60%; }
+.position-bottom-70   {bottom: 70%; }
+.position-bottom-80   {bottom: 80%; }
+.position-bottom-90   {bottom: 90%; }
+.position-bottom-100  {bottom: 100% }
+
+/* Fonts */
 
 .font-primary   { font-family: var(--font-primary); }
 .font-secondary { font-family: var(--font-secondary); }
@@ -431,6 +525,17 @@ html {
 .h-80  { height: var(--container-80); }
 .h-90  { height: var(--container-90); }
 .h-100 { height: var(--container-100); }
+
+/* Image Utilities */
+.img-fluid      { max-width: 100%; height: auto; }
+.img-cover      { object-fit: cover; }
+.img-contain    { object-fit: contain; }
+.img-shadow     { box-shadow: var(--shadow-xl); }
+.img-rounded    { border-radius: var(--border-radius-md); }
+.img-circle     { border-radius: 50%; }
+.img-grayscale  { filter: grayscale(100%); }
+.img-blur       { filter: var(--filter-blur-md); }
+.img-opacity    { opacity: var(--opacity-50); }
 
 /* Border Radius */
 .rounded-sm     { border-radius: var(--border-radius-sm); }
