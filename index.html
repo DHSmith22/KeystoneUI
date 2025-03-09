@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,6 +17,7 @@
     <!-- FONT SHEETS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=light_mode" />
     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 
     <!-- DEFAULT CSS SHEETS | CHOOSE BASED ON FILE STRUCTURE -->
@@ -24,45 +25,46 @@
         <!-- <link rel="stylesheet" href="../css/keystone.css"> -->
         <link rel="stylesheet" href="css/keystone.css">
 </head>
-<body class="w-100 h-100 bg-gray-900 flex flex-col font-primary overflow-hidden-x">
+<body class="w-100 h-100 flex flex-col font-primary overflow-hidden-x">
     <!-- LANDING PAGE -->
     <section class="w-100 h-100 flex flex-col items-center relative">
         <!-- HEADER/NAV -->
-        <header class="w-90 h-10 bg-gray-800 rounded-md mt-md md:mt-sm">
+        <header class="w-90 h-10 bg-color-md rounded-md mt-md md:mt-sm">
             <nav class="w-100 h-100 flex flex-row justify-around items-center">
                 <div class="md:w-70">
-                    <a href="" class="text-secondary text-2xl text-none md:text-4xl">KeystoneUI</a>
+                    <a href="" class="text-primary text-2xl text-none md:text-4xl">KeystoneUI</a>
                 </div>
-                <a href="" class="text-secondary text-md text-none md:text-lg">Faq</a>
-                <a href="" class="text-secondary text-md text-none md:text-lg">About</a>
-                <a href="https://dhsmith22.github.io" class="text-secondary text-md text-none md:text-lg">Back</a>
+                <a href="" class="text-primary text-md text-none md:text-lg">Faq</a>
+                <a href="" class="text-primary text-md text-none md:text-lg">About</a>
+                <a href="https://dhsmith22.github.io" class="text-primary text-md text-none md:text-lg">Back</a>
+                <button id="theme-toggle" class="no-background cursor-pointer"><span class="material-symbols-outlined">light_mode</span></button>
             </nav>
         </header>
         <!-- P-1 MAIN CONTENT -->
-        <main class="w-90 h-90 bg-gray-800 mt-sm rounded-md grid grid-cols-12 grid-flow-row">
-            <article class="w-100 h-100 bg-gray-700 col-span-12 flex flex-col items-center rounded-md overflow-hidden-y">
+        <main class="w-90 h-90 bg-color-lt mt-sm rounded-md grid grid-cols-12 grid-flow-row">
+            <article class="w-100 h-100 bg-color-main col-span-12 flex flex-col items-center rounded-md overflow-hidden-y">
                 <figure class="w-100 h-60 pt-sm flex justify-center">
                     <img class="img-contain w-70 h-100 img-shadow img-rounded md:w-50 lg:w-30" alt="An image of Emperor Marcus Aurelius" src="https://images.unsplash.com/photo-1739323147107-bc748671f498?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
                 </figure>
-                <div class="divider-light w-50"></div>
-                <h1 class="text-muted pt-sm">
+                <div class="divider w-50"></div>
+                <h1 class="text-primary pt-sm">
                     Marcus Aurelius
                 </h1>
-                <p class="text-secondary text-center m-md text-auto-hyphens text-wrap">
+                <p class="text-primary text-center m-md text-auto-hyphens text-wrap">
                     “The happiness of your life depends upon the quality of your thoughts.”
                 </p>
-                <div class="divider-light w-50"></div>
+                <div class="divider w-50"></div>
             </article>
         </main>
     </section>
     <!-- FIXED FOOTER -->
-    <footer class="w-90 h-10 bg-gray-800 fixed align-self-center position-bottom-0 rounded-sm flex flex-col items-center">
+    <footer class="w-90 h-10 bg-color-md fixed align-self-center position-bottom-0 rounded-sm flex flex-col items-center">
         <header class="w-90 h-100 rounded-md flex flex-row md:justify-end">
             <nav class="w-100 h-100 flex flex-row justify-around items-center md:w-40 md:justify-between">
-                <a href="" class="text-secondary text-sm text-none">Careers</a>
-                <a href="" class="text-secondary text-sm text-none">Socials</a>
-                <a href="" class="text-secondary text-sm text-none">Charities</a>
-                <a href="" class="text-secondary text-sm text-none">Donations</a>
+                <a href="" class="text-primary text-sm text-none">Careers</a>
+                <a href="" class="text-primary text-sm text-none">Socials</a>
+                <a href="" class="text-primary text-sm text-none">Charities</a>
+                <a href="" class="text-primary text-sm text-none">Donations</a>
             </nav>
         </header>
     </footer>

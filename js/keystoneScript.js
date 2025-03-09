@@ -1,16 +1,20 @@
-localStorage.getItem("theme");
+// DARK/LIGHT MODE TOGGLE
 
-localStorage.setItem("theme", newTheme);
-const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-const systemSettingLight = window.matchMedia("(prefers-color-scheme: light)");
+const toggleButton = document.getElementById('theme-toggle'); // ID FOR TOGGLE BUTTON
+let currentTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', currentTheme);
 
-const toggleTheme = () => {
-    const root = document.documentElement;
-    const currentTheme = root.getAttribute("data-theme");
-    root.setAttribute("data-theme", currentTheme === "dark" ? "light" : "dark");
-};
-
-document.querySelector("#theme-toggle").addEventListener("click", toggleTheme);
+toggleButton.addEventListener('click', ()=>{
+    currentTheme = document.documentElement.getAttribute('data-theme');
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        currentTheme = 'dark';
+    } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+        currentTheme = 'light';
+    }
+    localStorage.setItem('theme', currentTheme);
+});
 
 // PARALLAX FUNCTIONS
 

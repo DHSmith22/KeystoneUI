@@ -4,27 +4,6 @@
     box-sizing: border-box;
     
 }
-/* ~~~~~ Scrollbar CSS ~~~~~ */
-  /* Firefox */
-  * {
-    scrollbar-width: auto;
-    scrollbar-color: var(--scroll-col-1) var(--scroll-col-2);
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 16px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: var(--scroll-col-2);
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: var(--scroll-col-1);
-    border-radius: 10px;
-  }
-
 html {
     scroll-behavior: smooth;
     width: 100vw;
@@ -194,20 +173,25 @@ html {
                     --color-red-light : #d63c3c;
                     --color-red-dark  : #8b1d1d;
                 /* Text Colors */
-                    --text-color-primary   : var(--color-gray-900);
-                    --text-color-secondary : var(--color-gray-200);
-                    --text-color-muted     : var(--color-gray-500);
-                    --text-color-light     : var(--color-gray-100);
-                    --text-color-link      : var(--color-blue);
-                    --text-color-heading   : var(--color-gray-700);
+                    --text-color-lt   : var(--color-gray-100);
+                    --text-color-md   : var(--color-gray-400);
+                    --text-color-dk   : var(--color-gray-900);
+                    --text-color-link : var(--color-yellow-dark);
                 /* Border Colors */
                     --border-color-light : var(--color-gray-300);
                     --border-color-base  : var(--color-gray-500);
                     --border-color-dark  : var(--color-gray-700);
                     --border-color-focus : var(--color-yellow-light);
+                    --divider-dark: var(--color-gray-100);
+                    --divider-light: var(--color-gray-900);
                 /* Scrollbar Colors */
                     --scroll-col-1 : var(--color-gray-700);
                     --scroll-col-2 : var(--color-gray-900);
+
+                    --scroll-col-1-light : var(--color-gray-500);
+                    --scroll-col-2-light : var(--color-gray-100);
+                    --scroll-col-1-dark : var(--color-gray-700);
+                    --scroll-col-2-dark : var(--color-gray-900);
         /* Gradients */
             /* Monochrome Gradients */
                 --gradient-gray-light : linear-gradient(180deg, var(--color-gray-100), var(--color-gray-300));
@@ -263,36 +247,86 @@ html {
 }
 /* DARK MODE STYLES */
 [data-theme="dark"] {
-    --color-background: var(--color-gray-900);
-    --color-card: var(--color-gray-600);
+    background-color: var(--color-gray-900);
+    color: var(--text-color-secondary);
+    --text-color-1: var(--text-color-lt);
+    --text-color-2: var(--text-color-md);
+    --text-color-3: var(--text-color-dk);
+
+    --container-color-lt: var(--color-gray-600);
+    --container-color-md: var(--color-gray-700);
+    --container-color-dk: var(--color-gray-800);
+
+    --divider-color: var(--divider-dark);
+
+    --google-symbols-color: var(--text-color-1);
+
+    /* ~~~~~ Scrollbar CSS ~~~~~ */
+    scrollbar-width: auto;
+    scrollbar-color: var(--scroll-col-1-dark) var(--scroll-col-2-dark); /* Firefox */
     
-    /* Text Colors */
-    --text-color-primary: var(--color-gray-100);
-    --text-color-secondary: var(--color-gray-300);
-    --text-color-muted: var(--color-gray-500);
-    --text-color-link: var(--color-blue-light);
-    --text-color-heading: var(--color-gray-200);
-    
-    /* Accent Colors */
-    --color-green: #4caf50;
-    --color-blue: #4285f4;
-    
-    /* Gradients */
-    --gradient-accent-soft: linear-gradient(135deg, #4caf50, #4285f4);
-    --gradient-accent-bold: linear-gradient(135deg, #3a7a44, #2a5298);
+    /* Chrome, Edge, Safari */
+    -webkit-scrollbar {
+        width: 16px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: var(--scroll-col-1-dark);
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--scroll-col-2-dark);
+        border-radius: 10px;
+    }
+
+}
+[data-theme="light"] {
+    background-color: var(--color-gray-100);
+    --text-color-1: var(--text-color-dk);
+    --text-color-2: var(--text-color-md);
+    --text-color-3: var(--text-color-lt);
+
+    --container-color-lt: var(--color-gray-300);
+    --container-color-md: var(--color-gray-400);
+    --container-color-dk: var(--color-gray-500);
+
+    --divider-color: var(--divider-light);
+
+    --google-symbols-color: var(--text-color-1);
+
+/* ~~~~~ Scrollbar CSS ~~~~~ */
+  /* Firefox */
+    scrollbar-width: auto;
+    scrollbar-color: var(--scroll-col-1-light) var(--scroll-col-2-light);
+
+  /* Chrome, Edge, and Safari */
+  -webkit-scrollbar {
+    width: 16px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--scroll-col-2-light);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--scroll-col-1-light);
+    border-radius: 10px;
+  }
+
 }
 
 /* CLASS NAMES */
 
 /* General Utilities */
-.overflow-hidden   {overflow: hidden;}
-.overflow-hidden-x {overflow-x: hidden; }
-.overflow-hidden-y {overflow-y: hidden; }
-.scroll-proximity  {scroll-snap-type: proximity; }
+.overflow-hidden            {overflow: hidden;}
+.overflow-hidden-x          {overflow-x: hidden; }
+.overflow-hidden-y          {overflow-y: hidden; }
+.scroll-proximity           {scroll-snap-type: proximity; }
+.no-background              {background: none; border: none; }
+.material-symbols-outlined  {color: var(--google-symbols-color); }
 
 /* Section Divider */
-.divider-dark {background: var(--color-gray-900); height: 1px; width: 75%; margin: 2%;}
-.divider-light {background: var(--color-gray-100); height: 1px; width: 75%; margin: 2%;}
+.divider {background: var(--divider-color); height: 1px; width: 75%; margin: 2%;}
 
 /* Element Positioning */
 .relative   {position: relative; }
@@ -561,17 +595,20 @@ html {
 .opacity-100    { opacity: var(--opacity-100); }
 
 /* Colors */
-.bg-white       { background-color: var(--color-white); }
-.bg-black       { background-color: var(--color-black); }
-.bg-gray-100    { background-color: var(--color-gray-100); }
-.bg-gray-200    { background-color: var(--color-gray-200); }
-.bg-gray-300    { background-color: var(--color-gray-300); }
-.bg-gray-400    { background-color: var(--color-gray-400); }
-.bg-gray-500    { background-color: var(--color-gray-500); }
-.bg-gray-600    { background-color: var(--color-gray-600); }
-.bg-gray-700    { background-color: var(--color-gray-700); }
-.bg-gray-800    { background-color: var(--color-gray-800); }
-.bg-gray-900    { background-color: var(--color-gray-900); }
+.bg-white           { background-color: var(--color-white); }
+.bg-black           { background-color: var(--color-black); }
+.bg-color-lt    {background-color: var(--container-color-lt);}
+.bg-color-md    {background-color: var(--container-color-md);}
+.bg-color-dk    {background-color: var(--container-color-dk);}
+.bg-gray-100        { background-color: var(--color-gray-100); }
+.bg-gray-200        { background-color: var(--color-gray-200); }
+.bg-gray-300        { background-color: var(--color-gray-300); }
+.bg-gray-400        { background-color: var(--color-gray-400); }
+.bg-gray-500        { background-color: var(--color-gray-500); }
+.bg-gray-600        { background-color: var(--color-gray-600); }
+.bg-gray-700        { background-color: var(--color-gray-700); }
+.bg-gray-800        { background-color: var(--color-gray-800); }
+.bg-gray-900        { background-color: var(--color-gray-900); }
 
 .bg-green       { background-color: var(--color-green); }
 .bg-green-light { background-color: var(--color-green-light); }
@@ -590,12 +627,10 @@ html {
 .bg-red-dark    { background-color: var(--color-red-dark); }
 
 /* Text Colors */
-.text-primary   { color: var(--text-color-primary); }
-.text-secondary { color: var(--text-color-secondary); }
-.text-muted     { color: var(--text-color-muted); }
-.text-light     { color: var(--text-color-light); }
+.text-primary   { color: var(--text-color-1); }
+.text-secondary { color: var(--text-color-2); }
+.text-muted     { color: var(--text-color-3); }
 .text-link      { color: var(--text-color-link); }
-.text-heading   { color: var(--text-color-heading); }
 
 /* Border Colors */
 .border-light   { border-color: var(--border-color-light); }
@@ -750,6 +785,9 @@ html {
 .grid-items-center   { align-items: center; }
 .grid-items-end      { align-items: end; }
 .grid-items-stretch  { align-items: stretch; }
+
+/* Hover */
+.cursor-pointer {cursor: pointer;}
 
 /* ~~~~~ MEDIA SCREENS ~~~~~ */
 /* MOBILE */
