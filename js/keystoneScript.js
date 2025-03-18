@@ -70,6 +70,21 @@ function closePopup(overlay) {
         overlay.remove();
     }, 150);
 }
+
+// CONTACT FORM DATA STORAGE
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const formData = {
+        name:       document.getElementById("contactName").value,
+        email:      document.getElementById("contactEmail").value,
+        message:    document.getElementById("contactMessage").value
+    };
+    localStorage.setItem("contactFormData", JSON.stringify(formData));
+    console.log("Form data saved:", formData);
+    document.getElementById('contactForm').reset();
+    console.log('Form fields cleared successfully');
+});
+
 // PARALLAX FUNCTIONS
 
 // DROPDOWN MENUS

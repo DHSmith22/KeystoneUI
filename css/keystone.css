@@ -173,7 +173,7 @@ html {
                     --color-red-light : #d63c3c;
                     --color-red-dark  : #8b1d1d;
                 /* Text Colors */
-                    --text-color-lt   : var(--color-gray-100);
+                    --text-color-lt   : var(--color-gray-300);
                     --text-color-md   : var(--color-gray-400);
                     --text-color-dk   : var(--color-gray-900);
                     --text-color-link : var(--color-yellow-dark);
@@ -325,6 +325,8 @@ html {
 .scroll-proximity           {scroll-snap-type: proximity; }
 .no-background              {background: none; border: none; }
 .material-symbols-outlined  {color: var(--google-symbols-color); }
+.hidden                     {display: none;}
+.display                    {display: block;}
 
 /* Section Divider */
 .divider {background: var(--divider-color); height: 1px; width: 75%; margin: 2%;}
@@ -805,6 +807,18 @@ html {
 /* ~~~~~ MEDIA SCREENS ~~~~~ */
 /* MOBILE */
 @media (min-width: 480px){
+/* General Utilities */
+.sm\:overflow-hidden            {overflow: hidden;}
+.sm\:overflow-hidden-x          {overflow-x: hidden; }
+.sm\:overflow-hidden-y          {overflow-y: hidden; }
+.sm\:overflow-scroll-x          {overflow-x: scroll;}
+.sm\:overflow-scroll-y          {overflow-y: scroll;}
+.sm\:scroll-proximity           {scroll-snap-type: proximity; }
+.sm\:no-background              {background: none; border: none; }
+.sm\:material-symbols-outlined  {color: var(--google-symbols-color); }
+.sm\:hidden                     {display: none;}
+.sm\:display                    {display: block;}
+    
 .sm\:font-primary   { font-family: var(--font-primary); }
 .sm\:font-secondary { font-family: var(--font-secondary); }
 .sm\:font-mono      { font-family: var(--font-mono); }
@@ -1194,6 +1208,18 @@ html {
 }
 /* TABLET */
 @media (min-width: 768px){
+/* General Utilities */
+.md\:overflow-hidden            {overflow: hidden;}
+.md\:overflow-hidden-x          {overflow-x: hidden; }
+.md\:overflow-hidden-y          {overflow-y: hidden; }
+.md\:overflow-scroll-x          {overflow-x: scroll;}
+.md\:overflow-scroll-y          {overflow-y: scroll;}
+.md\:scroll-proximity           {scroll-snap-type: proximity; }
+.md\:no-background              {background: none; border: none; }
+.md\:material-symbols-outlined  {color: var(--google-symbols-color); }
+.md\:hidden                     {display: none;}
+.md\:display                    {display: block;}
+
 .md\:font-primary   { font-family: var(--font-primary); }
 .md\:font-secondary { font-family: var(--font-secondary); }
 .md\:font-mono      { font-family: var(--font-mono); }
@@ -1583,6 +1609,17 @@ html {
 }
 /* LAPTOP */
 @media (min-width: 1024px){
+.lg\:overflow-hidden            {overflow: hidden;}
+.lg\:overflow-hidden-x          {overflow-x: hidden; }
+.lg\:overflow-hidden-y          {overflow-y: hidden; }
+.lg\:overflow-scroll-x          {overflow-x: scroll;}
+.lg\:overflow-scroll-y          {overflow-y: scroll;}
+.lg\:scroll-proximity           {scroll-snap-type: proximity; }
+.lg\:no-background              {background: none; border: none; }
+.lg\:material-symbols-outlined  {color: var(--google-symbols-color); }
+.lg\:hidden                     {display: none;}
+.lg\:display                    {display: block;}
+
 .lg\:font-primary   { font-family: var(--font-primary); }
 .lg\:font-secondary { font-family: var(--font-secondary); }
 .lg\:font-mono      { font-family: var(--font-mono); }
@@ -1972,6 +2009,17 @@ html {
 }
 /* DESKTOP */
 @media (min-width: 1200px){
+.xl\:overflow-hidden            {overflow: hidden;}
+.xl\:overflow-hidden-x          {overflow-x: hidden; }
+.xl\:overflow-hidden-y          {overflow-y: hidden; }
+.xl\:overflow-scroll-x          {overflow-x: scroll;}
+.xl\:overflow-scroll-y          {overflow-y: scroll;}
+.xl\:scroll-proximity           {scroll-snap-type: proximity; }
+.xl\:no-background              {background: none; border: none; }
+.xl\:material-symbols-outlined  {color: var(--google-symbols-color); }
+.xl\:hidden                     {display: none;}
+.xl\:display                    {display: block;}
+
 .xl\:font-primary   { font-family: var(--font-primary); }
 .xl\:font-secondary { font-family: var(--font-secondary); }
 .xl\:font-mono      { font-family: var(--font-mono); }

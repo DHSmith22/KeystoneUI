@@ -1,3 +1,13 @@
-
+// ADD TO ANY BUTTON USED TO TOGGLE THE LIGHT/DARK MODE
 id="theme-toggle"
+
+// ADD TO ANY IMAGE TO HAVE ANIMATED POP OUT
 id="popImage"
+
+// CONTACT PAGE INFORMATION IDS
+id="contactForm"
+
+id="contactName"
+id="contactEmail"
+id="contactMessage"
+id="contactSubmit"
